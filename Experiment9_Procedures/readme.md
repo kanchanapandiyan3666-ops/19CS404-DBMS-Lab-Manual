@@ -63,6 +63,23 @@ Key Differences:
 **Expected Output:**  
 Square of 6 is 36
 
+## PROGRAM:
+```
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE find_square(num IN NUMBER)
+IS
+    result NUMBER;
+BEGIN
+    result := POWER(num, 2);
+
+    DBMS_OUTPUT.PUT_LINE('The square of ' || num || ' = ' || result);
+END;
+/
+```
+## OUTPUT:
+
+
 ---
 
 ## 2. Write a PL/SQL Function to Return the Factorial of a Number
@@ -77,6 +94,10 @@ Square of 6 is 36
 **Expected Output:**  
 Factorial of 5 is 120
 
+## PROGRAM:
+```
+
+```
 ---
 
 ## 3. Write a PL/SQL Procedure to Check Whether a Number is Even or Odd
