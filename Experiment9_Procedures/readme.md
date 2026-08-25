@@ -65,14 +65,15 @@ Square of 6 is 36
 ## PROGRAM:
 ```
 SET SERVEROUTPUT ON;
-
-CREATE OR REPLACE PROCEDURE find_square(num IN NUMBER)
+CREATE OR REPLACE PROCEDURE find_square(n NUMBER)
 IS
-    result NUMBER;
 BEGIN
-    result := POWER(num, 2);
+    DBMS_OUTPUT.PUT_LINE('Square of ' || n || ' is ' || (n * n));
+END;
+/
 
-    DBMS_OUTPUT.PUT_LINE('The square of ' || num || ' = ' || result);
+BEGIN
+    find_square(6);
 END;
 /
 ```
