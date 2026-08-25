@@ -36,8 +36,21 @@ END;
 
 **Expected Output:**  
 Greater number is: 80
-
----
+### program:
+```
+DECLARE
+    a NUMBER := 50;
+    b NUMBER :=80;
+BEGIN
+    IF a > b THEN
+        DBMS_OUTPUT.PUT_LINE('Greater number is: ' || a);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Greater number is: ' || b);
+    END IF;
+END;
+```
+### OUTPUT:
+<img width="306" height="141" alt="Screenshot 2026-08-25 102252" src="https://github.com/user-attachments/assets/7c574725-ef81-4103-9ada-4d0ab3715d88" />
 
 ## 2. Write a PL/SQL program to Calculate Sum of First N Natural Numbers
 
