@@ -1,4 +1,4 @@
-# Experiment 7: PL/SQL – Variables, Control Structures and Loops
+<img width="337" height="155" alt="image" src="https://github.com/user-attachments/assets/3519f2a2-a53e-48c9-8655-e6702d1e4550" /># Experiment 7: PL/SQL – Variables, Control Structures and Loops
 
 ## AIM
 To write and execute simple PL/SQL programs using variables, loops, and conditional statements.
@@ -62,6 +62,23 @@ END;
 
 **Expected Output:**  
 Sum of first 10 natural numbers is: 55
+### PROGRAM:
+```
+DECLARE
+    n NUMBER := 10;
+    i NUMBER := 1;
+    sum NUMBER := 0;
+BEGIN
+    WHILE i <= n LOOP
+        sum := sum + i;
+        i := i + 1;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Sum of first ' || n || ' natural numbers is: ' || sum);
+END;
+```
+### OUTPUT
+<img width="332" height="161" alt="Screenshot 2026-08-25 102623" src="https://github.com/user-attachments/assets/3e4b79c2-6af4-449d-827a-8362377ab083" />
 
 ---
 
@@ -76,6 +93,33 @@ Sum of first 10 natural numbers is: 55
 **Expected Output:**  
 n = 7  
 Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
+### PROGRAM:
+~~~
+DECLARE
+    n NUMBER := 7;
+    a NUMBER := 0;
+    b NUMBER := 1;
+    c NUMBER;
+    i NUMBER := 1;
+BEGIN
+    DBMS_OUTPUT.PUT('Fibonacci sequence: ');
+
+    WHILE i <= n LOOP
+        DBMS_OUTPUT.PUT(a || ' ');
+
+        c := a + b;
+        a := b;
+        b := c;
+
+        i := i + 1;
+    END LOOP;
+
+    DBMS_OUTPUT.NEW_LINE;
+END;
+~~~
+
+### OUTPUT:
+<img width="302" height="136" alt="Screenshot 2026-08-25 103111" src="https://github.com/user-attachments/assets/7625c7e9-0a09-4cf1-97e5-2aab9efb7c58" />
 
 ---
 
@@ -89,6 +133,25 @@ Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
 **Expected Output:**  
 n = 1535  
 Reversed number is 5351
+### PROGRAM:
+```
+DECLARE
+    n NUMBER := 1535;
+    rev NUMBER := 0;
+    digit NUMBER;
+BEGIN
+    WHILE n > 0 LOOP
+        digit := MOD(n, 10);
+        rev := rev * 10 + digit;
+        n := TRUNC(n / 10);
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Reversed number is: ' || rev);
+END;
+```
+
+### OUTPUT:
+<img width="337" height="155" alt="Screenshot 2026-08-25 103316" src="https://github.com/user-attachments/assets/f4fdb4e8-abdf-4383-a4bf-7591145670e3" />
 
 ---
 
@@ -102,6 +165,28 @@ Reversed number is 5351
 **Expected Output:**  
 a = 10, b = 9, c = 15  
 Largest of three number is 15
+
+### PROGRAM
+```
+DECLARE
+    a NUMBER := 10;
+    b NUMBER := 9;
+    c NUMBER := 15;
+    largest NUMBER;
+BEGIN
+    IF a >= b AND a >= c THEN
+        largest := a;
+    ELSIF b >= a AND b >= c THEN
+        largest := b;
+    ELSE
+        largest := c;
+    END IF;
+
+    DBMS_OUTPUT.PUT_LINE('Largest of three numbers is: ' || largest);
+END;
+```
+### OUTPUT:
+<img width="320" height="147" alt="Screenshot 2026-08-25 103439" src="https://github.com/user-attachments/assets/72479b3f-0330-419e-9582-3aeedb9abb14" />
 
 ## RESULT
 Thus, the PL/SQL programs using variables, conditionals, and loops were executed successfully.
