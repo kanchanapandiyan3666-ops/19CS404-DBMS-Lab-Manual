@@ -115,6 +115,7 @@ END;
 
 **Output:**  
 The program should display the employee details or an error message.
+
 <img width="391" height="181" alt="Screenshot 2026-08-25 104752" src="https://github.com/user-attachments/assets/eab2eb12-95b2-460c-bf5b-306518a08aac" />
 
 ---
