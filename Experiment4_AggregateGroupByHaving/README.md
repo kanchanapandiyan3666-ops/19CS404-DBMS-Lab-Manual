@@ -136,11 +136,10 @@ from employee1;
 
 
 **Question 6**
-```
 Write a SQL query to calculate the average purchase amount of all orders. Return average purchase amount.
 
 Sample table: orders
-
+```
 ord_no      purch_amt   ord_date    customer_id  salesman_id
 
 ----------  ----------  ----------  -----------  -----------
