@@ -83,9 +83,9 @@ reorder_lvl
 quantity
 supplier_id
 ```
-```
+~~~
 update Products set quantity=quantity*1.10;
-```
+~~~
 **Output:**
 
 <img width="977" height="511" alt="Screenshot 2026-09-01 222604" src="https://github.com/user-attachments/assets/c9f2325a-ee78-4bbb-99f5-c54e5e8b76af" />
