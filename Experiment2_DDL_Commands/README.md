@@ -104,13 +104,14 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
+```
 Create a table named Invoices with the following constraints:
 InvoiceID as INTEGER should be the primary key.
 InvoiceDate as DATE.
 Amount as REAL should be greater than 0.
 DueDate as DATE should be greater than the InvoiceDate.
 OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
-
+```
 ```
 CREATE TABLE Invoices(
 InvoiceID INTEGER primary key, InvoiceDate date,
@@ -128,9 +129,14 @@ foreign key(OrderID) references Orders(OrderID)
 
 
 **Question 2**
+```
+Create a table named Invoices with the following constraints:
 
-<img width="773" height="285" alt="Screenshot 2026-09-01 215558" src="https://github.com/user-attachments/assets/582833cf-9032-4422-a96e-8377a5f1fb84" />
-
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+DueDate as DATE should be greater than the InvoiceDate.
+Amount as REAL should be greater than 0.
+```
 ```
 CREATE TABLE Invoices(
 InvoiceID INTEGER primary key,
@@ -145,8 +151,19 @@ Amount REAL CHECK (Amount>0)
 
 
 **Question 3**
+Write a SQL query to Add a new column State as text in the Student_details table.
 
-<img width="967" height="488" alt="Screenshot 2026-09-01 215739" src="https://github.com/user-attachments/assets/db18e179-afc0-49b4-9f49-041be734c21c" />
+Sample table: Student_details
+```
+
+ cid              name             type   notnull     dflt_value  pk
+---------------  ---------------  -----  ----------  ----------  ----------
+0                RollNo           int    0                       1
+1                Name             VARCH  1                       0
+2                Gender           TEXT   1                       0
+3                Subject          VARCH  0                       0
+4                MARKS            INT (  0                       0
+```
 
 ```
 ALTER TABLE Student_details ADD State TEXT;
@@ -158,7 +175,14 @@ ALTER TABLE Student_details ADD State TEXT;
 
 
 **Question 4**
-<img width="933" height="350" alt="Screenshot 2026-09-01 215832" src="https://github.com/user-attachments/assets/9666fca3-a4ff-4605-bf4a-18ae61df6ac7" />
+Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
+```
+CustomerID  Name          Address
+----------  ------------  ----------
+304         Peter Parker  Spider St 4
+```     
+
+Note: The City and ZipCode columns will use their default values.
 
 
 ```
@@ -171,8 +195,14 @@ insert into Customers (CustomerID,Name,Address) Values (304,'Peter Parker','Spid
 
 
 **Question 5**
-<img width="1095" height="407" alt="Screenshot 2026-09-01 215923" src="https://github.com/user-attachments/assets/de4ac1bd-f1c5-4b3d-84cd-dfed231110a0" />
-
+In the Employee table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+```
+EmployeeID  Name          Position    Department  Salary
+----------  ------------  ----------  ----------  ----------
+5           George Clark  Consultant
+7           Noah Davis    Manager     HR          60000
+8           Ava Miller    Consultant  IT
+```
 
 ```
 INSERT INTO Employee (EmployeeID,Name,Position,Department,Salary)
@@ -190,8 +220,13 @@ VALUES(8,'Ava Miller','Consultant','IT',NULL);
 
 
 **Question 6**
-<img width="1032" height="333" alt="Screenshot 2026-09-01 220016" src="https://github.com/user-attachments/assets/3aac006e-ea8f-4b21-9dcb-4a337df994fa" />
+```
+Create a table named Events with the following columns:
 
+EventID as INTEGER
+EventName as TEXT
+EventDate as DATE
+```
 
 ```
 Create table Events(
@@ -207,8 +242,12 @@ EventDate DATE
 
 
 **Question 7**
-<img width="1106" height="280" alt="Screenshot 2026-09-01 220103" src="https://github.com/user-attachments/assets/0c8627f9-1022-4595-a3d5-96d73d166190" />
-
+```
+Create a table named Department with the following constraints:
+DepartmentID as INTEGER should be the primary key.
+DepartmentName as TEXT should be unique and not NULL.
+Location as TEXT.
+```
 
 ```
 CREATE TABLE Department(
@@ -221,7 +260,7 @@ DepartmentID int,DepartmentName text not null unique,Location Text,primary key(D
 
 
 **Question 8**
-<img width="1065" height="337" alt="Screenshot 2026-09-01 220147" src="https://github.com/user-attachments/assets/7ebb33dc-c087-4e1c-9077-7ac9008e6001" />
+Write a SQL query to Add a new ParentsNumber column  as number and Adhar_Number as Number in the Student_details table.
 
 
 ```
@@ -237,7 +276,9 @@ ADD COLUMN Adhar_Number number;
 
 
 **Question 9**
-<img width="1021" height="308" alt="Screenshot 2026-09-01 220232" src="https://github.com/user-attachments/assets/a72f6934-a5d4-4596-80ea-c5f9d9bbf884" />
+Insert all books from Out_of_print_books into Books
+
+Table attributes are ISBN, Title, Author, Publisher, YearPublished
 
 
 ```
@@ -251,8 +292,15 @@ FROM Out_of_print_books;
 
 
 **Question 10**
-<img width="1120" height="325" alt="Screenshot 2026-09-01 220316" src="https://github.com/user-attachments/assets/8b1beeb3-bff6-40cb-bf29-c5bbcbb84769" />
+```
+Create a table named Employees with the following constraints:
 
+EmployeeID should be the primary key.
+FirstName and LastName should be NOT NULL.
+Email should be unique.
+Salary should be greater than 0.
+DepartmentID should be a foreign key referencing the Departments table.
+```
 
 ```
 CREATE TABLE Employees(
