@@ -110,7 +110,7 @@ InvoiceDate as DATE.
 Amount as REAL should be greater than 0.
 DueDate as DATE should be greater than the InvoiceDate.
 OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
--
+
 ```
 CREATE TABLE Invoices(
 InvoiceID INTEGER primary key, InvoiceDate date,
@@ -128,14 +128,13 @@ foreign key(OrderID) references Orders(OrderID)
 
 
 **Question 2**
-```
 Create a table named Invoices with the following constraints:
 
 InvoiceID as INTEGER should be the primary key.
 InvoiceDate as DATE.
 DueDate as DATE should be greater than the InvoiceDate.
 Amount as REAL should be greater than 0.
-```
+
 ```
 CREATE TABLE Invoices(
 InvoiceID INTEGER primary key,
@@ -219,13 +218,11 @@ VALUES(8,'Ava Miller','Consultant','IT',NULL);
 
 
 **Question 6**
-```
 Create a table named Events with the following columns:
 
 EventID as INTEGER
 EventName as TEXT
 EventDate as DATE
-```
 
 ```
 Create table Events(
@@ -241,12 +238,10 @@ EventDate DATE
 
 
 **Question 7**
-```
 Create a table named Department with the following constraints:
 DepartmentID as INTEGER should be the primary key.
 DepartmentName as TEXT should be unique and not NULL.
 Location as TEXT.
-```
 
 ```
 CREATE TABLE Department(
@@ -291,7 +286,6 @@ FROM Out_of_print_books;
 
 
 **Question 10**
-```
 Create a table named Employees with the following constraints:
 
 EmployeeID should be the primary key.
@@ -299,7 +293,6 @@ FirstName and LastName should be NOT NULL.
 Email should be unique.
 Salary should be greater than 0.
 DepartmentID should be a foreign key referencing the Departments table.
-```
 
 ```
 CREATE TABLE Employees(
