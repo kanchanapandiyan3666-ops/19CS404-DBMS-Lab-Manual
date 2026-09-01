@@ -104,16 +104,39 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+```
+Create a table named Invoices with the following constraints:
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+Amount as REAL should be greater than 0.
+DueDate as DATE should be greater than the InvoiceDate.
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+For example:
 
-```sql
--- Paste your SQL code below for Question 1
+Test	Result
+INSERT INTO Orders (OrderID, OrderDate, CustomerID) VALUES (1, '2024-08-01', 1);
+INSERT INTO Invoices (InvoiceID, InvoiceDate, Amount, DueDate, OrderID) VALUES (1, '2024-08-01', 100.0, '2024-09-01', 1);
+SELECT * FROM Invoices;
+InvoiceID   InvoiceDate  Amount      DueDate     OrderID
+----------  -----------  ----------  ----------  ----------
+1           2024-08-01   100.0       2024-09-01  1
+```
+
+```
+CREATE TABLE Invoices(
+InvoiceID INTEGER primary key, InvoiceDate date,
+Amount real check(Amount>0),
+DueDate date,
+OrderID int,
+check(DueDate>InvoiceDate),
+foreign key(OrderID) references Orders(OrderID)
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="972" height="272" alt="Screenshot 2026-09-01 214422" src="https://github.com/user-attachments/assets/86d28e59-ad83-4b82-8ffb-31c12e8252eb" />
+
 
 **Question 2**
 ---
