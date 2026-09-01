@@ -104,7 +104,12 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
-<img width="1110" height="322" alt="Screenshot 2026-09-01 215039" src="https://github.com/user-attachments/assets/74830c06-9d86-4b1d-a587-64cedd535ba8" />
+Create a table named Invoices with the following constraints:
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+Amount as REAL should be greater than 0.
+DueDate as DATE should be greater than the InvoiceDate.
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 
 ```
 CREATE TABLE Invoices(
