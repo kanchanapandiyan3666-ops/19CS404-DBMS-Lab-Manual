@@ -37,7 +37,9 @@ HAVING condition;
 ```
 
 **Question 1**
+
 <img width="832" height="200" alt="Screenshot 2026-09-01 223604" src="https://github.com/user-attachments/assets/53c0f259-e547-4205-a985-4265f62348c5" />
+
 ```
 select PatientID,
 COUNT(PatientID) AS AvgMedications
@@ -50,6 +52,7 @@ group by PatientID;
 
 
 **Question 2**
+
 <img width="825" height="208" alt="Screenshot 2026-09-01 223621" src="https://github.com/user-attachments/assets/b45ac859-01e8-4d23-ac56-deaf1f729d98" />
 
 ```
@@ -60,10 +63,12 @@ group by DoctorID;
 ```
 
 **Output:**
+
 <img width="586" height="545" alt="Screenshot 2026-09-01 223627" src="https://github.com/user-attachments/assets/c68b21b1-d720-43a5-95df-a965c38ca604" />
 
 
 **Question 3**
+
 How many patients are covered by each insurance company?
 ```
 Sample table:Insurance Table
@@ -85,10 +90,12 @@ group by InsuranceCompany;
 
 ```
 **Output:**
+
 <img width="608" height="591" alt="Screenshot 2026-09-01 224033" src="https://github.com/user-attachments/assets/0b18767e-2733-48ad-8148-a4792bebfe12" />
 
 
 **Question 4**
+
 Write a SQL query to calculate total available amount of fruits that has a price greater than 0.5 . Return total Count. 
 
 Note: Inventory attribute contains amount of fruits
@@ -108,12 +115,16 @@ select sum(inventory) as total_available_amount
 from fruits
 where price>0.5;
 ```
+
 **Output:**
+
 <img width="501" height="325" alt="Screenshot 2026-09-01 224514" src="https://github.com/user-attachments/assets/a7e46c68-7792-4413-a3e6-e30ae3d0620b" />
 
 
 **Question 5**
+
 <img width="942" height="397" alt="Screenshot 2026-09-01 224522" src="https://github.com/user-attachments/assets/1cb87344-915f-465f-8400-241cc3b21c9e" />
+
 ```
 select sum(workhour) as 'Total working hours'
 from employee1;
@@ -146,6 +157,7 @@ avg(purch_amt) as AVERAGE FROM orders;
 ```
 
 **Output:**
+
 <img width="385" height="332" alt="Screenshot 2026-09-01 224657" src="https://github.com/user-attachments/assets/f47609c8-17ae-42bf-9a50-0bc4e70a1c1c" />
 
 **Question 7**
@@ -173,6 +185,7 @@ where income>50000;
 
 
 **Question 8**
+
 <img width="1002" height="442" alt="Screenshot 2026-09-01 224804" src="https://github.com/user-attachments/assets/b5021eda-7aa9-4084-8889-d4f4834f3196" />
 ```
 select age,MIN(income) as Income
@@ -187,6 +200,7 @@ having MIN(income) <1000000;
 <img width="563" height="433" alt="Screenshot 2026-09-01 224813" src="https://github.com/user-attachments/assets/174cd0fe-2e2d-4643-bd5f-bb3f50a17b20" />
 
 **Question 9**
+
 <img width="967" height="416" alt="Screenshot 2026-09-01 224918" src="https://github.com/user-attachments/assets/f3232d67-d2b1-4c2e-af6a-345744ca2394" />
 
 
@@ -203,6 +217,7 @@ having AVG(Price) between 10 and 15;
 
 
 **Question 10**
+
 <img width="982" height="428" alt="Screenshot 2026-09-01 225013" src="https://github.com/user-attachments/assets/55a736b6-cff6-4c0c-a6bd-75c079d5c287" />
 
 
