@@ -186,12 +186,12 @@ where income>50000;
 **Question 8**
 
 <img width="1002" height="442" alt="Screenshot 2026-09-01 224804" src="https://github.com/user-attachments/assets/b5021eda-7aa9-4084-8889-d4f4834f3196" />
+
 ```
 select age,MIN(income) as Income
 from employee
 group by age
 having MIN(income) <1000000;
-
 ```
 
 **Output:**
