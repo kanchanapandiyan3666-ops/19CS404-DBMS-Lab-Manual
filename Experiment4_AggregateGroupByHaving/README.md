@@ -1,4 +1,4 @@
-<img width="563" height="433" alt="image" src="https://github.com/user-attachments/assets/bb5d781f-14f2-4625-bc14-a3aaab7f07a7" /># Experiment 4: Aggregate Functions, Group By and Having Clause
+## Experiment 4: Aggregate Functions, Group By and Having Clause
 
 ## AIM
 To study and implement aggregate functions, GROUP BY, and HAVING clause with suitable examples.
