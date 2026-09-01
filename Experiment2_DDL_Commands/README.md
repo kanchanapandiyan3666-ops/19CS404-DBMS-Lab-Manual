@@ -104,23 +104,7 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
-```
-Create a table named Invoices with the following constraints:
-InvoiceID as INTEGER should be the primary key.
-InvoiceDate as DATE.
-Amount as REAL should be greater than 0.
-DueDate as DATE should be greater than the InvoiceDate.
-OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
-For example:
-
-Test	Result
-INSERT INTO Orders (OrderID, OrderDate, CustomerID) VALUES (1, '2024-08-01', 1);
-INSERT INTO Invoices (InvoiceID, InvoiceDate, Amount, DueDate, OrderID) VALUES (1, '2024-08-01', 100.0, '2024-09-01', 1);
-SELECT * FROM Invoices;
-InvoiceID   InvoiceDate  Amount      DueDate     OrderID
-----------  -----------  ----------  ----------  ----------
-1           2024-08-01   100.0       2024-09-01  1
-```
+<img width="1110" height="322" alt="Screenshot 2026-09-01 215039" src="https://github.com/user-attachments/assets/74830c06-9d86-4b1d-a587-64cedd535ba8" />
 
 ```
 CREATE TABLE Invoices(
@@ -139,112 +123,148 @@ foreign key(OrderID) references Orders(OrderID)
 
 
 **Question 2**
----
--- Paste Question 2 here
 
-```sql
--- Paste your SQL code below for Question 2
+<img width="773" height="285" alt="Screenshot 2026-09-01 215558" src="https://github.com/user-attachments/assets/582833cf-9032-4422-a96e-8377a5f1fb84" />
+
+```
+CREATE TABLE Invoices(
+InvoiceID INTEGER primary key,
+InvoiceDate Date,
+DueDate DATE CHECK (DueDate>InvoiceDate),
+Amount REAL CHECK (Amount>0)
+);
 ```
 
 **Output:**
+<img width="977" height="276" alt="Screenshot 2026-09-01 215627" src="https://github.com/user-attachments/assets/75563444-7bfe-43c0-a567-30ec0b5f75cd" />
 
-![Output2](output.png)
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+<img width="967" height="488" alt="Screenshot 2026-09-01 215739" src="https://github.com/user-attachments/assets/db18e179-afc0-49b4-9f49-041be734c21c" />
+
+```
+ALTER TABLE Student_details ADD State TEXT;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="987" height="347" alt="Screenshot 2026-09-01 215751" src="https://github.com/user-attachments/assets/1b0f73f8-0fec-43d6-b8b3-bcb3b240926a" />
+
 
 **Question 4**
----
--- Paste Question 4 here
+<img width="933" height="350" alt="Screenshot 2026-09-01 215832" src="https://github.com/user-attachments/assets/9666fca3-a4ff-4605-bf4a-18ae61df6ac7" />
 
-```sql
--- Paste your SQL code below for Question 4
+
+```
+insert into Customers (CustomerID,Name,Address) Values (304,'Peter Parker','Spider St');
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="957" height="291" alt="Screenshot 2026-09-01 215841" src="https://github.com/user-attachments/assets/27af5b07-e2bc-4e22-a7e7-938b0f8184a3" />
+
 
 **Question 5**
----
--- Paste Question 5 here
+<img width="1095" height="407" alt="Screenshot 2026-09-01 215923" src="https://github.com/user-attachments/assets/de4ac1bd-f1c5-4b3d-84cd-dfed231110a0" />
 
-```sql
--- Paste your SQL code below for Question 5
+
+```
+INSERT INTO Employee (EmployeeID,Name,Position,Department,Salary)
+VALUES(5,'George Clark','Consultant',NULL,NULL);
+INSERT INTO Employee (EmployeeID,Name,Position,Department,Salary)
+VALUES(7,'Noah Davis','Manager','HR',60000);
+INSERT INTO Employee (EmployeeID,Name,Position,Department,Salary)
+VALUES(8,'Ava Miller','Consultant','IT',NULL);
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="997" height="286" alt="Screenshot 2026-09-01 215933" src="https://github.com/user-attachments/assets/407b0110-88ce-4a4b-9703-17924d3d0d43" />
+
 
 **Question 6**
----
--- Paste Question 6 here
+<img width="1032" height="333" alt="Screenshot 2026-09-01 220016" src="https://github.com/user-attachments/assets/3aac006e-ea8f-4b21-9dcb-4a337df994fa" />
 
-```sql
--- Paste your SQL code below for Question 6
+
+```
+Create table Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate DATE
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="976" height="368" alt="Screenshot 2026-09-01 220026" src="https://github.com/user-attachments/assets/e80af598-0a55-42aa-bcb1-a8e8fe1e0c61" />
+
 
 **Question 7**
----
--- Paste Question 7 here
+<img width="1106" height="280" alt="Screenshot 2026-09-01 220103" src="https://github.com/user-attachments/assets/0c8627f9-1022-4595-a3d5-96d73d166190" />
 
-```sql
--- Paste your SQL code below for Question 7
+
+```
+CREATE TABLE Department(
+DepartmentID int,DepartmentName text not null unique,Location Text,primary key(DepartmentID));
 ```
 
 **Output:**
+<img width="990" height="286" alt="Screenshot 2026-09-01 220114" src="https://github.com/user-attachments/assets/1c05d985-77de-4a07-b0f2-8e8a944090e4" />
 
-![Output7](output.png)
+
 
 **Question 8**
----
--- Paste Question 8 here
+<img width="1065" height="337" alt="Screenshot 2026-09-01 220147" src="https://github.com/user-attachments/assets/7ebb33dc-c087-4e1c-9077-7ac9008e6001" />
 
-```sql
--- Paste your SQL code below for Question 8
+
+```
+ALTER TABLE Student_details
+ADD COLUMN ParentsNumber number;
+ALTER TABLE Student_details 
+ADD COLUMN Adhar_Number number;
+
 ```
 
 **Output:**
+<img width="988" height="358" alt="Screenshot 2026-09-01 220157" src="https://github.com/user-attachments/assets/bf17039e-c046-4f38-aa34-d55aaa5c4102" />
 
-![Output8](output.png)
 
 **Question 9**
----
--- Paste Question 9 here
+<img width="1021" height="308" alt="Screenshot 2026-09-01 220232" src="https://github.com/user-attachments/assets/a72f6934-a5d4-4596-80ea-c5f9d9bbf884" />
 
-```sql
--- Paste your SQL code below for Question 9
+
+```
+INSERT INTO Books(ISBN,Title,Author,Publisher,YearPublished)
+SELECT ISBN,Title,Author,Publisher,YearPublished
+FROM Out_of_print_books;
 ```
 
 **Output:**
+<img width="953" height="293" alt="Screenshot 2026-09-01 220241" src="https://github.com/user-attachments/assets/d98a53f0-6261-4a2f-8847-9028aa43afbe" />
 
-![Output9](output.png)
 
 **Question 10**
----
--- Paste Question 10 here
+<img width="1120" height="325" alt="Screenshot 2026-09-01 220316" src="https://github.com/user-attachments/assets/8b1beeb3-bff6-40cb-bf29-c5bbcbb84769" />
 
-```sql
--- Paste your SQL code below for Question 10
+
+```
+CREATE TABLE Employees(
+EmployeeID INT primary key,
+FirstName VARCHAR(100) NOT NULL,
+LastName VARCHAR(100) NOT NULL,
+Email VARCHAR(255) NOT NULL unique,
+Salary DECIMAL(10,2) check (salary>0),
+DepartmentID INT NOT NULL,
+FOREIGN KEY(DepartmentID) REFERENCES Departments(DepartmentID)
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1007" height="397" alt="Screenshot 2026-09-01 220324" src="https://github.com/user-attachments/assets/22146e0a-57cf-4c0d-b188-5c731c580bd1" />
+
 
 
 ## RESULT
